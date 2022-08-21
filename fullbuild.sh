@@ -13,7 +13,7 @@ function make_loop() {
             continue;
         fi
 	    cd $dir
-	    makepkg -f -c --noconfirm
+	    makepkg --syncdeps --cleanbuild
         copyto_upload_dir
         echo "makepkg from "$dir" finished"
         cd ..
